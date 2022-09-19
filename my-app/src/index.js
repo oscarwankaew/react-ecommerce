@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "jquery";
 import "@popperjs/core/dist/umd/popper";
 import "bootstrap/dist/js/bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import { NavBar } from "./App";
+import "./index.css";
 
-var element = <div>Hello World</div>;
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(<NavBar />, document.getElementById("root"));
