@@ -9,7 +9,7 @@ export default class MainContent extends Component{
       {id: 2, name: "Giulianna", phone: "333-0022", address: { state: "Arizona"}},
       {id: 3, name: "Hazel", phone: "222-6654", address: { state: "Colorado"}},
       {id: 4, name: "Ellie", phone: "888-9876", address: { state: "California"}},
-      {id: 5, name: "John", phone: "123-4567", address: { state: "Texas"}},
+      {id: 5, name: "John", phone: null, address: { state: "Texas"}},
     ],
   };
 
@@ -34,7 +34,7 @@ export default class MainContent extends Component{
                   <tr key={customer.id}>
                   <td>{customer.id}</td>
                   <td>{customer.name}</td>
-                  <td>{customer.phone}</td>
+                  <td>{customer.phone == null ? "No Phone" : customer.phone}</td>
                   <td>{customer.address.state}</td>
                 </tr>
               );
