@@ -5,11 +5,11 @@ export default class MainContent extends Component{
     pageTitle: "Customers", 
     customersCount: 5,
     customers:[
-      {id: 1, name: "Oscar", phone: "444-1100", address: { state: "Illinois"}},
-      {id: 2, name: "Giulianna", phone: "333-0022", address: { state: "Arizona"}},
-      {id: 3, name: "Hazel", phone: "222-6654", address: { state: "Colorado"}},
-      {id: 4, name: "Ellie", phone: "888-9876", address: { state: "California"}},
-      {id: 5, name: "John", phone: null, address: { state: "Texas"}},
+      {id: 1, name: "Oscar", phone: "444-1100", address: { state: "Illinois"}, photo: "https://picsum.photos/id/1010/60"},
+      {id: 2, name: "Giulianna", phone: "333-0022", address: { state: "Arizona"}, photo: "https://picsum.photos/id/102/60"},
+      {id: 3, name: "Hazel", phone: "222-6654", address: { state: "Colorado"}, photo: "https://picsum.photos/id/1011/60"},
+      {id: 4, name: "Ellie", phone: "888-9876", address: { state: "California"}, photo: "https://picsum.photos/id/1015/60"},
+      {id: 5, name: "John", phone: null, address: { state: "Texas"}, photo: "https://picsum.photos/id/1020/60"},
     ],
   };
 
@@ -55,6 +55,7 @@ export default class MainContent extends Component{
       return(
         <tr key={customer.id}>
         <td>{customer.id}</td>
+        <td><img src={customer.photo} alt="Customer"/></td>
         <td>{customer.name}</td>
         <td>{this.getPhoneToRender(customer.phone)}</td>
         <td>{customer.address.state}</td>
