@@ -14,9 +14,9 @@ export default class MainContent extends Component{
   };
 
   customerNameStyle = (customerName) => {
-    if (customerName.startsWith("O")) return {backgroundColor: "Green"};
-    else if (customerName.startsWith("G")) return {backgroundColor: "Pink"};
-    else return {};
+    if (customerName.startsWith("O")) return "green-highlight border-left";
+    else if (customerName.startsWith("G")) return "pink-highlight border-right";
+    else return "";
   };
 
  render(){
@@ -62,7 +62,7 @@ export default class MainContent extends Component{
         <tr key={customer.id}>
         <td>{customer.id}</td>
         <td><img src={customer.photo} alt="Customer"/></td>
-        <td style={this.customerNameStyle(customer.name)}>
+        <td className={this.customerNameStyle(customer.name)}>
           {customer.name}
           </td>
         <td>{this.getPhoneToRender(customer.phone)}</td>

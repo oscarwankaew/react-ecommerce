@@ -6,3 +6,15 @@
 {
   background-color: bisque!important;
 }
+
+.green-highlight
+{
+  color: greenyellow;
+  font-size: 40px;
+}
+
+.pink-highlight
+{
+  color: lightpink;
+  font-size: 25px;
+}
