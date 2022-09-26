@@ -13,11 +13,11 @@ export default class MainContent extends Component{
     ],
   };
 
-  customerNameStyle = (customerName) => {
-    if (customerName.startsWith("O")) return "green-highlight border-left";
-    else if (customerName.startsWith("G")) return "pink-highlight border-right";
-    else return "";
-  };
+  // customerNameStyle = (customerName) => {
+  //   if (customerName.startsWith("O")) return "green-highlight border-left";
+  //   else if (customerName.startsWith("G")) return "pink-highlight border-right";
+  //   else return "";
+  // };
 
  render(){
    return(
@@ -57,12 +57,17 @@ export default class MainContent extends Component{
   }
 
   getCustomerInfo = () => {
-    return this.state.customers.map((customer) => {
+    return this.state.customers.map((customer, index) => {
       return(
         <tr key={customer.id}>
         <td>{customer.id}</td>
-        <td><img src={customer.photo} alt="Customer"/></td>
-        <td className={this.customerNameStyle(customer.name)}>
+        <td>
+          <img src={customer.photo} alt="Customer"/>
+          <div>
+            <button className="btn btn-sm btn-secondary" onClick={() => {this.onChangePictureClick(customer, index);}}>Change Picture</button>
+          </div>
+        </td>
+        <td> 
           {customer.name}
           </td>
         <td>{this.getPhoneToRender(customer.phone)}</td>
@@ -71,4 +76,12 @@ export default class MainContent extends Component{
     );
   });
   };
+
+  onChangePictureClick = (customer, index) => {
+    var customerArr = this.state.customers;
+    customerArr[index].photo = "https://picsum.photos/id/1050/60"
+    this.setState({customers: customerArr});
+  };
 }
+
+// className={this.customerNameStyle(customer.name)}
