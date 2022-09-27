@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Products from "./Products";
 export default class ShoppingCart extends Component {
 
   state = { 
@@ -14,8 +15,21 @@ export default class ShoppingCart extends Component {
   
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <h4>Shopping Cart</h4>
+        <div className="row">
+          {this.state.products.map((product) => {
+            return(
+            <Products 
+            key={product.id} 
+            id={product.id} 
+            productName={product.productName} 
+            price={product.price} 
+            quantity={product.quantity} 
+            />
+            );
+          })}
+        </div>
       </div>
     );
   }
