@@ -22,8 +22,9 @@ export default class ShoppingCart extends Component {
             return(
             <Products 
             key={item.id} 
-            product={item}
-            />
+            product={item}>
+              <button className="btn btn-primary">Buy Now</button>
+            </Products>
             );
           })}
         </div>
