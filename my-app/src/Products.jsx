@@ -14,8 +14,15 @@ export default class Products extends Component
             <h5 className="pt-2 border-top">{this.state.product.productName}</h5>
             <div>$ {this.state.product.price}</div>
           </div>
-          <div className="text-end me-2">
-            {this.props.children}
+          <div className="card-footer">
+            <div className="float-start">
+              <span className="badge bg-light text-dark">{this.state.product.quantity}</span>
+              <div className="btn-group">
+                <button className="btn btn-outline-success">+</button>
+                <button className="btn btn-outline-success">-</button>
+              </div>
+            </div>
+            <div className="float-end">{this.props.children}</div>
           </div>
         </div>
       </div>
