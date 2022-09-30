@@ -25,6 +25,7 @@ export default class ShoppingCart extends Component {
             product={item}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
+            onDelete={this.handleDelete}
             >
               <button className="btn btn-primary">Buy Now</button>
             </Products>
@@ -64,4 +65,16 @@ export default class ShoppingCart extends Component {
     // console.log("handleDecrement", product);
     // console.log(allProducts[index]);
   };
+
+  handleDelete = (product) => {
+    // get index of selected product
+    let allProducts = [...this.state.products];
+    let index = allProducts.indexOf(product);
+
+    // delete product based on index
+    allProducts.splice(index, 1);
+
+    // update the state of current component
+    this.setState({products: allProducts});
+  }
 }
