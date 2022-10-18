@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Products from "./Products";
 export default class ShoppingCart extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    console.log("constructor - ShoppingCart")
+    super(props);
     this.state = { 
       products: [ 
         {id: 1, productName: "iPhone 14", price: 1500, quantity: 0}, 
@@ -19,6 +20,7 @@ export default class ShoppingCart extends Component {
   
   
   render() {
+    console.log("render - ShoppingCart")
     return (
       <div className="container-fluid">
         <h4>Shopping Cart</h4>
@@ -39,6 +41,11 @@ export default class ShoppingCart extends Component {
         </div>
       </div>
     );
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount - ShoppingCart")
+
   }
 
   handleIncrement = (product, maxValue) => {
