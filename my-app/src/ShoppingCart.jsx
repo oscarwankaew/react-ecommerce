@@ -52,6 +52,10 @@ export default class ShoppingCart extends Component {
     console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state)
   }
 
+  componentWillUnmount() {
+    console.log("componentWillUnmount - ShoppingCart")
+  }
+
   handleIncrement = (product, maxValue) => {
   
     let allProducts = [...this.state.products];
