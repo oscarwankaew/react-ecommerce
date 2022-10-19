@@ -3,16 +3,16 @@ import Products from "./Products";
 export default class ShoppingCart extends Component {
 
   constructor(props) {
-    console.log("constructor - ShoppingCart")
+    console.log("constructor - ShoppingCart");
     super(props);
     this.state = { 
       products: [ 
         {id: 1, productName: "iPhone 14", price: 1500, quantity: 0}, 
-        {id: 2, productName: "LG TV", price: 4500, quantity: 0},
-        {id: 3, productName: "Samsung TV", price: 500, quantity: 0},
-        {id: 4, productName: "MacBook Pro", price: 2000, quantity: 0},
-        {id: 5, productName: "PS5", price: 3000, quantity: 0},
-        {id: 6, productName: "Xbox 1", price: 3000, quantity: 0},
+        // {id: 2, productName: "LG TV", price: 4500, quantity: 0},
+        // {id: 3, productName: "Samsung TV", price: 500, quantity: 0},
+        // {id: 4, productName: "MacBook Pro", price: 2000, quantity: 0},
+        // {id: 5, productName: "PS5", price: 3000, quantity: 0},
+        // {id: 6, productName: "Xbox 1", price: 3000, quantity: 0},
       ],
     };
   }
@@ -20,7 +20,7 @@ export default class ShoppingCart extends Component {
   
   
   render() {
-    console.log("render - ShoppingCart")
+    console.log("render - ShoppingCart");
     return (
       <div className="container-fluid">
         <h4>Shopping Cart</h4>
@@ -44,16 +44,16 @@ export default class ShoppingCart extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount - ShoppingCart")
+    console.log("componentDidMount - ShoppingCart");
 
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state)
+    console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state);
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount - ShoppingCart")
+    console.log("componentWillUnmount - ShoppingCart");
   }
 
   handleIncrement = (product, maxValue) => {
