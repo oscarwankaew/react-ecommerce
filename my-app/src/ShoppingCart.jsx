@@ -56,6 +56,12 @@ export default class ShoppingCart extends Component {
     console.log("componentWillUnmount - ShoppingCart");
   }
 
+  componentDidCatch(error, info) {
+    console.log("componentDidCatch - ShoppingCart", error, info);
+
+    localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
+  }
+
   handleIncrement = (product, maxValue) => {
   
     let allProducts = [...this.state.products];
