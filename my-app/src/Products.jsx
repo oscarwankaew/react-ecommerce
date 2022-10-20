@@ -4,7 +4,7 @@ export default class Products extends Component {
   constructor(props) {
     super(props);
 
-    console.log("constructor - Products");
+    // console.log("constructor - Products");
 
     this.state = {
       product: this.props.product
@@ -14,7 +14,7 @@ export default class Products extends Component {
 
   render(){
 
-    console.log("render - Products");
+    // console.log("render - Products");
 
     return (
       <div className="col-lg-6">
@@ -55,15 +55,15 @@ export default class Products extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount - Products");
+    // console.log("componentDidMount - Products");
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate - Products");
+    // console.log("componentDidUpdate - Products");
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount - Products");
+    // console.log("componentWillUnmount - Products");
   }
 }
 

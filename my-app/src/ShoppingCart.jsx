@@ -3,7 +3,7 @@ import Products from "./Products";
 export default class ShoppingCart extends Component {
 
   constructor(props) {
-    console.log("constructor - ShoppingCart");
+    // console.log("constructor - ShoppingCart");
     super(props);
     this.state = { 
       products: [ 
@@ -20,7 +20,7 @@ export default class ShoppingCart extends Component {
   
   
   render() {
-    console.log("render - ShoppingCart");
+    // console.log("render - ShoppingCart");
     return (
       <div className="container-fluid">
         <h4>Shopping Cart</h4>
@@ -44,20 +44,20 @@ export default class ShoppingCart extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount - ShoppingCart");
+    // console.log("componentDidMount - ShoppingCart");
 
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state);
+    // console.log("componentDidUpdate - ShoppingCart", prevProps, prevState, this.props, this.state);
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount - ShoppingCart");
+    // console.log("componentWillUnmount - ShoppingCart");
   }
 
   componentDidCatch(error, info) {
-    console.log("componentDidCatch - ShoppingCart", error, info);
+    // console.log("componentDidCatch - ShoppingCart", error, info);
 
     localStorage.lastError = `${error}\n${JSON.stringify(info)}`;
   }
