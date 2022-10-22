@@ -31,7 +31,14 @@ export default class App extends Component {
         {/* Password starts */}
         <div className="form-group form-row">
           <label className="col-lg-4">Password:</label>
-          <input type="password" className="form-control" value={this.state.password} />
+          <input 
+            type="password" 
+            className="form-control" 
+            value={this.state.password}
+            onChange={(event) => { 
+              this.setState({ password: event.target.value });
+            }} 
+          />
         </div>
         {/* Password ends */}
 
