@@ -42,7 +42,8 @@ export default class App extends Component {
         </div>
         {/* Password ends */}
 
-        <div> 
+        <div className="text-right">
+          {this.state.message} 
           <button className="btn btn-primary" onClick={this.onLoginClick}>Login </button>
         </div>
 
@@ -53,5 +54,15 @@ export default class App extends Component {
 
   onLoginClick = () => {
     console.log(this.state)
+    if (this.state.email === "admin@test.com" && this.state.password === "123456")
+    {
+      this.setState({
+        message: <span className="text-success">Successfully logged-in</span>
+      });
+    } else {
+      this.setState({
+        message: <span className="text-danger">Invalid login, please try again</span>
+      }); 
+    }
   }
 }
