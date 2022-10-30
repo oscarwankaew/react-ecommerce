@@ -48,6 +48,7 @@ export default class ShoppingCart extends Component {
 
         this.setState({ products: prods});
       });
+      // pulling data from localhost:5000
     });
 
   }
