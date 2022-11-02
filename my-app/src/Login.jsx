@@ -60,7 +60,7 @@ export default class App extends Component {
     var body = await response.json();
 
 
-    if (body)
+    if (body.length > 0)
     {
       this.setState({
         message: <span className="text-success">Successfully logged-in</span>
