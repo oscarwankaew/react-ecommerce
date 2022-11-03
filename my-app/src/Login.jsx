@@ -72,3 +72,8 @@ export default class App extends Component {
     }
   }
 }
+
+// GET used to retrieve / search data from server
+// POST used to insert data to server
+// PUT used to update data on server
+// DELETE used to delete data from server
