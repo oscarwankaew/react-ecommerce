@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
-import Login from "./Login";
+import Dashboard from "./Dashboard";
 
 export default class App extends Component{
   render(){
     return (
       <React.Fragment>
         <NavBar />
-        <Login></Login>
+        <Dashboard></Dashboard>
       </React.Fragment>
     );
   } 
