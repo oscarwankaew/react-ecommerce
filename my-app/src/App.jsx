@@ -4,7 +4,7 @@ import Dashboard from "./Dashboard";
 import Login from "./Login";
 import ShoppingCart from "./ShoppingCart";
 import CustomerList from "./CustomerList";
-import { Route } from "react-router";
+import { Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 
 export default class App extends Component{
@@ -12,10 +12,10 @@ export default class App extends Component{
     return (
       <BrowserRouter>
         <NavBar />
-        <Route path="/" exact component={Login} />
-        <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/customers" exact component={CustomerList} />
-        <Route path="/cart" exact component={ShoppingCart} />
+        <Routes path="/" exact component={Login} />
+        <Routes path="/dashboard" exact component={Dashboard} />
+        <Routes path="/customers" exact component={CustomerList} />
+        <Routes path="/cart" exact component={ShoppingCart} />
       </BrowserRouter>
     );
   } 
