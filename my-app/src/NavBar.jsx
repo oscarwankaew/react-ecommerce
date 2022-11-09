@@ -13,7 +13,19 @@ class NavBar extends Component{
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <a className="nav-link" href="/">Login</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Products</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Cart</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Customers</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Dashboard</a>
               </li>
             </ul>
     
