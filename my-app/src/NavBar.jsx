@@ -16,16 +16,16 @@ class NavBar extends Component{
                 <a className="nav-link" href="/">Login</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Products</a>
+                <a className="nav-link" href="/products">Products</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Cart</a>
+                <a className="nav-link" href="/cart">Cart</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Customers</a>
+                <a className="nav-link" href="/customers">Customers</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Dashboard</a>
+                <a className="nav-link" href="/dashboard">Dashboard</a>
               </li>
             </ul>
     
