@@ -14,11 +14,11 @@ import React, { Component } from "react";
          <NavBar />
          <div className="container-fluid">
            <Routes>
-             <Route path="/" exact component={Login} />
-             <Route path="/dashboard" exact component={Dashboard} />
-             <Route path="/customers" exact component={CustomerList} />
-             <Route path="/cart" exact component={ShoppingCart} />
-             <Route path="*" component={NoMatchPage} />
+             <Route path="/" element={<Login />} />
+             <Route path="/dashboard" element={<Dashboard />} />
+             <Route path="/customers" element={<CustomerList />} />
+             <Route path="/cart" element={<ShoppingCart />} />
+             <Route path="*" element={<NoMatchPage />} />
            </Routes>
          </div>
        </Router>
