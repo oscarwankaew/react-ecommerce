@@ -14,15 +14,19 @@ class NavBar extends Component{
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                
                 <Link to="/" className="nav-link">Login</Link>
+              </li>
 
+              <li className="nav-item">
                 <Link to="/dashboard" className="nav-link">Dashboard</Link>
+              </li>
 
+              <li className="nav-item">
                 <Link to="/cart" className="nav-link">Shopping Cart</Link>
+              </li>
 
+              <li className="nav-item">
                 <Link to="/customers" className="nav-link">Customers</Link>
-
               </li>
             </ul>
     
