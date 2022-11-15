@@ -11,7 +11,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="col-lg-9">
+      <div>
         <h4 className="m-1 p-2 boarder-bottom">Login</h4>
 
         {/* Email starts */}
