@@ -12,7 +12,7 @@ class NavBar extends Component{
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav flex-grow-1">
               <li className="nav-item">
                 <Link to="/" className="nav-link">Login</Link>
               </li>
